@@ -4,7 +4,7 @@ import List from './list';
 import Header from './header';
 
 
-export default class Diary extends React.Component() {
+export default class Diary extends React.Component {
     constructor(){
         super();
         this.state={
@@ -16,11 +16,11 @@ export default class Diary extends React.Component() {
 
 
     render(){
-        <div>
+        return(<div>
             <Header />
             <Form />
             <List date="4/8/18" entry="Great day today!"/>
         </div>
-            
+      )   
     }
 }
