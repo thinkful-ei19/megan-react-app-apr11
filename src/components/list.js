@@ -20,7 +20,8 @@ export default function List (props){
             </li> 
             <ul className="inner ul">
                 <li>
-                    <em>Entry:</em> {diaryEntry.entry}
+                    <em>Entry:</em> 
+                    <div className="whitespace-entry">{diaryEntry.entry}</div>
                 </li>
             </ul>
         </ul>
