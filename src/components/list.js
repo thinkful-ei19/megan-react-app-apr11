@@ -1,11 +1,9 @@
 import React from 'react';
 
 export default function List (props){
-   console.log(props.allEntries);
-   console.log(props.state);
    const pastEntriesToShow = props.allEntries
     .map((diaryEntry, index)=>
-            <li key={index}>
+            <li key={index} id={index}>
                 Date: {diaryEntry.date}  -  Entry: {diaryEntry.entry}
             </li>
     )

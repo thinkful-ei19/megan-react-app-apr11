@@ -23,7 +23,7 @@ export default class Diary extends React.Component {
     render(){
         return(<div>
             <Header />
-            <Form addEntry={(date, text)=>{console.log('work'); return this.addNewEntry(date, text)}}/>
+            <Form addEntry={(date, text)=>this.addNewEntry(date, text)}/>
             <List allEntries={this.state.fullEntry} state={this.state}/>
         </div>
       )   
