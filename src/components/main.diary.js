@@ -4,13 +4,23 @@ import List from './list';
 import Header from './header';
 
 
-export default function Diary () {
-    return(
+export default class Diary extends React.Component() {
+    constructor(){
+        super();
+        this.state={
+            date:'',
+            entry:''
+        }
+    }
+
+
+
+    render(){
         <div>
             <Header />
             <Form />
             <List date="4/8/18" entry="Great day today!"/>
         </div>
             
-    )
+    }
 }
