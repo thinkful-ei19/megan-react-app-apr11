@@ -1,27 +1,17 @@
 import React from 'react';
-import Form from './main.diary';
+import Form from './form';
+import List from './list';
+import Header from './header';
 
 
 export default function Diary () {
     return(
         <body>
-            <header>
-                <h1>Daily Diary</h1>
-            </header>
+            <Header />
             <main>
-               
-            <Form />
-
-                <ul>
-                    <li>
-                        Date: 04/21/18  -  Entry: balaskjdbaksjdbaksdbgklajbsdfklabsdfkljabsdlkfjb
-                    </li>
-                    <li>
-                        Date: 04/21/18  -  Entry: balaskjdbaksjdbaksdbgklajbsdfklabsdfkljabsdlkfjb
-                    </li>
-                </ul>
+                <Form />
+                <List />
             </main>
-
         </body>
     )
 }
