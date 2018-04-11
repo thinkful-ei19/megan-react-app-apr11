@@ -6,12 +6,11 @@ import Header from './header';
 
 export default function Diary () {
     return(
-        <body>
+        <div>
             <Header />
-            <main>
-                <Form />
-                <List />
-            </main>
-        </body>
+            <Form />
+            <List date="4/8/18" entry="Great day today!"/>
+        </div>
+            
     )
 }
