@@ -8,24 +8,14 @@ export default class Diary extends React.Component {
     constructor(){
         super();
         this.state={
-            fullEntry:[
-                {date:'4/8/10', entry:'hi'},
-                {date:'4/9/10', entry:'hello'}
-            ]
+            fullEntry:[]
         }
     }
 
-    // addDateToState = function(newDate){
-    //     this.setState({...this.state.fullEntry.date, newDate})
-    // }
-
-    // addEntryToState = function(newEntry){
-    //     this.setState({...this.state.fullEntry.entry, newEntry})
-    // }
-
-    addNewEntry = function(newEntry, newDate){
+    addNewEntry = function(newDate, newEntry){
         const entry = {date: newDate, entry: newEntry};
-        return this.setState({...this.state.fullEntry, entry})
+        console.log(...this.state.fullEntry);
+        this.setState({fullEntry:[...this.state.fullEntry, entry]})
     }
 
 
@@ -33,8 +23,8 @@ export default class Diary extends React.Component {
     render(){
         return(<div>
             <Header />
-            <Form />
-            <List allEntries={this.state.fullEntry}/>
+            <Form addEntry={(date, text)=>{console.log('work'); return this.addNewEntry(date, text)}}/>
+            <List allEntries={this.state.fullEntry} state={this.state}/>
         </div>
       )   
     }

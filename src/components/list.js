@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function List (props){
    console.log(props.allEntries);
+   console.log(props.state);
    const pastEntriesToShow = props.allEntries
     .map((diaryEntry, index)=>
             <li key={index}>
