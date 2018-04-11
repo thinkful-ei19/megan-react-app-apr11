@@ -2,6 +2,7 @@ import React from 'react';
 import Form from './form';
 import List from './list';
 import Header from './header';
+import Count from './count';
 
 
 export default class Diary extends React.Component {
@@ -24,6 +25,7 @@ export default class Diary extends React.Component {
         return(<div>
             <Header />
             <Form addEntry={(date, text)=>this.addNewEntry(date, text)}/>
+            <Count count={this.state.fullEntry.length}/>
             <List allEntries={this.state.fullEntry} state={this.state}/>
         </div>
       )   
