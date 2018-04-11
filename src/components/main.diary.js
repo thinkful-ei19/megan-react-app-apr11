@@ -8,9 +8,24 @@ export default class Diary extends React.Component {
     constructor(){
         super();
         this.state={
-            date:'',
-            entry:''
+            fullEntry:[
+                {date:'4/8/10', entry:'hi'},
+                {date:'4/9/10', entry:'hello'}
+            ]
         }
+    }
+
+    // addDateToState = function(newDate){
+    //     this.setState({...this.state.fullEntry.date, newDate})
+    // }
+
+    // addEntryToState = function(newEntry){
+    //     this.setState({...this.state.fullEntry.entry, newEntry})
+    // }
+
+    addNewEntry = function(newEntry, newDate){
+        const entry = {date: newDate, entry: newEntry};
+        return this.setState({...this.state.fullEntry, entry})
     }
 
 
@@ -19,7 +34,7 @@ export default class Diary extends React.Component {
         return(<div>
             <Header />
             <Form />
-            <List date="4/8/18" entry="Great day today!"/>
+            <List allEntries={this.state.fullEntry}/>
         </div>
       )   
     }
